@@ -1,5 +1,6 @@
 FROM ubuntu:16.04
 ADD http://ftp.cc.uoc.gr/Java/Linux-x86_64/1.5u22/jdk-1_5_0_22-linux-amd64.bin ./jdk-5-x64.bin
+RUN chmod +x jdk-5-x64.bin
 RUN echo 'yes' | ./jdk-5-x64.bin
 RUN rm jdk-5-x64.bin
 ADD http://archive.apache.org/dist/maven/binaries/apache-maven-2.2.1-bin.tar.gz .
